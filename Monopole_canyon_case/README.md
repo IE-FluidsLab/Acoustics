@@ -9,7 +9,7 @@ This case shows acoustic wave propagation in a Gaussian canyon geometry with a m
 To run the simulation, simply execute:
 
 ```bash
-./run_this_case.sh
+./run_this_example.sh
 ```
 
 This script performs the following steps:
