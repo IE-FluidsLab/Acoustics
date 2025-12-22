@@ -5,8 +5,8 @@ The content of this directory will be made available once the article “Modelin
 
 This directory contains two main subfolders:
 
-OpenFOAM
+[OpenFOAM]
 This folder includes the acoFOAM code and the benchmark setup for the Pekeris waveguide test case.
 
-Monopole_canyon_case
+[Monopole_canyon_case]
 This folder contains the configuration files and results (SPL_line_30.mat, SPL_line_180.mat) for the Gaussian Canyon benchmark test case performed with Specfem3d.
