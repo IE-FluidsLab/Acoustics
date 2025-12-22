@@ -24,7 +24,7 @@ This script performs the following steps:
 
 - Decomposes the external mesh found in the `MESH/` folder.
 - `$NPROC` is the number of processors used.
-- `$BASEMPIDIR` is the base directory used by MPI for output data.
+- `$BASEMPIDIR` is the folder for saving the decomposed domain.
 
 ### 2. Generate the Databases
 
@@ -49,7 +49,7 @@ The `DATA/` folder contains all configuration files used to define the simulatio
 
  ➤ `CMTSOLUTION`
 
-- Describes the **seismic source**.
+- Describes the **source**.
 - Configured as a **monopole** source.
 - Uses an external file containing a **Ricker wavelet** as the source time function.
 - The wavelet can be customized by modifying the corresponding input file.
@@ -62,11 +62,11 @@ The `DATA/` folder contains all configuration files used to define the simulatio
   - Time stepping (time step size, number of steps)
   - Output settings (e.g., seismograms, field snapshots)
   - Physical and numerical model parameters
+  - Recorded quantities (displacement, velocity, acceleration and pressure).
 
  ➤ `STATIONS`
 
 - Lists the receivers where wavefields will be recorded.
-- Recorded quantities can include displacement, velocity, acceleration and pressure.
 
 ---
 
