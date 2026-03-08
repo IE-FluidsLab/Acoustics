@@ -1,0 +1,20 @@
+
+
+ before running acoFoam - Pekeris_Waveguide case: 
+
+ run blockMesh - to build the mesh
+ run setFields - to assign cf (speed of sound) and rhof (density) values 
+ 
+ set or check constant/SourceParameters
+ set or check constant/CPLMParameters
+ 
+
+ Recommendations
+
+- Grid cells must be orthogonal, with a maximum non-orthogonality of 60.
+
+- The CPLM layer must be at least two wavelengths thick.
+
+- We used 15 grid points per wavelength, a coarser mesh may lead to high numerical dispersion effects.
+
+- The Courant number should remain below 0.5. It is automatically evaluated and printed when acoFoam starts running.

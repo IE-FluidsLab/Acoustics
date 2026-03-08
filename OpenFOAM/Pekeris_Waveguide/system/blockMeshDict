@@ -1,0 +1,73 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2206                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+domain
+{
+    xIn   -0.2;
+        
+    xMin  -900;
+    xMax  3100;
+    zMin  -800;
+    zMax   800;
+    y0    -1000;
+    y1     0;
+
+    // Number of cells
+    xCells  800;
+    zCells  320;
+    yCells  200; 
+
+    // Mesh grading
+    yGrading    0;  
+}
+
+vertices
+(
+
+    ($:domain.xMin $:domain.y0 $:domain.zMin)  // vertex number 0
+    ($:domain.xMax $:domain.y0 $:domain.zMin)  // vertex number 1
+    ($:domain.xMax $:domain.y1 $:domain.zMin)  // vertex number 2
+    ($:domain.xMin $:domain.y1 $:domain.zMin)  // vertex number 3
+
+    ($:domain.xMin $:domain.y0 $:domain.zMax)  // vertex number 4
+    ($:domain.xMax $:domain.y0 $:domain.zMax)  // vertex number 5
+    ($:domain.xMax $:domain.y1 $:domain.zMax)  // vertex number 6
+    ($:domain.xMin $:domain.y1 $:domain.zMax)  // vertex number 7
+
+);
+
+blocks
+(
+    hex ( 0  1  2  3  4  5  6  7)    ($:domain.xCells $:domain.yCells $:domain.zCells)     simpleGrading (1 1 1) // bulk jet inlet1
+
+);
+
+edges
+(
+
+);
+defaultPatch
+    {
+        name    out;
+        type    wall;
+    }
+boundary
+(
+  
+);
+
+
+// ************************************************************************* //

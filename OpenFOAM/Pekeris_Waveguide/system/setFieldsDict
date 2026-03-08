@@ -1,0 +1,50 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.2.2                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      setFieldsDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+defaultFieldValues
+(
+
+);
+
+regions
+(
+    // water
+    boxToCell
+    {
+	box (-2000 -2000 -1000) (6000 0 1000);
+
+        fieldValues
+        (
+	 	volScalarField rhof 1000
+		volScalarField cf   1500
+        );
+    }
+
+    // sediments
+    boxToCell
+    {
+        box (-2000 -3000 -1000) (6000 -100 1000);
+
+        fieldValues
+        (
+                volScalarField rhof 1800
+                volScalarField cf   1800
+        );
+    }
+
+);
+
+// ************************************************************************* //
