@@ -44,7 +44,7 @@ theta_.value() = theta_.value()*Foam::constant::mathematical::pi/180;
 dimensionedScalar t0("t0",dimTime,SourceParameters);
 
 //moving source 
-	dimensionedVector  p1("p1",dimLength,SourceParameters);
+	    dimensionedVector  p1("p1",dimLength,SourceParameters);
         dimensionedVector  p2("p2",dimLength,SourceParameters);
         dimensionedScalar  vel("vel",dimVelocity,SourceParameters);
 	Info << "\n Moving on line: point 1 "<< p1.value()<<" to point 2 "<<p2.value()<<" vel. "<< vel.value()<<endl;
