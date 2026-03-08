@@ -1,0 +1,34 @@
+Further Developments
+
+Current version: March 2026 – OpenFOAM v2406
+
+The current implementation has some limitations and possible areas for improvement. The following points outline potential future developments:
+
+1. Higher-order time discretization
+
+At present, the solver supports only a first-order scheme for the temporal derivative.
+Higher-order time discretization schemes could be implemented and systematically verified in order to improve accuracy.
+
+
+2. Sensitivity to mesh non-orthogonality
+
+The code becomes numerically unstable for highly non-orthogonal meshes.
+In our tests, the largest value that still provided stable results corresponds to a maximum non-orthogonality of about 60.
+
+Further work could investigate:
+
+1) improved discretization strategies,
+
+2) correction schemes for non-orthogonal meshes,
+
+3) solver modifications to enhance robustness.
+
+
+3. Source formulation
+
+The acoustic source is currently implemented using a hard source approach.
+
+At the IE-Fluids Laboratory, University of Trieste, we tested an alternative transparent source formulation in an in-house code. 
+See the reference work: Lamonaca, F., Petris, G., Cianferra, M., & Armenio, V. (2024). Non-reflective hard source method for multiple physically extended sources and scattering bodies. Physics of Fluids, 36(3).
+Validation tests indicate that this method performs better when the source is located close to reflecting boundaries.
+However, this approach has not yet been implemented in the present OpenFOAM version.
