@@ -140,8 +140,8 @@ scalarField b_x;
 scalarField b_y;
 scalarField b_z;
 
-if(CPLM==true){
-        Info << "\n CPLM set-up ...  "<<endl;
+if(CPML==true){
+        Info << "\n CPML set-up ...  "<<endl;
  
 	//Find the initial position of the colm region
         dimensionedScalar xL1=(max_lim.component(0)-L_damp.component(0));
@@ -153,10 +153,10 @@ if(CPLM==true){
 
         Info << "-->1 "<<xL1<<" "<<xL2<<" "<<yL1<<" "<<yL2<<""<<zL1<<" "<<zL2<<endl;
         scalarField cplm_x1 = pos(mesh.C().component(0)-xL1)*mag(mesh.C().component(0)-xL1)/L_damp.component(0); 
-	scalarField cplm_y1 = pos(mesh.C().component(1)-yL1)*mag(mesh.C().component(1)-yL1)/L_damp.component(1);
+	    scalarField cplm_y1 = pos(mesh.C().component(1)-yL1)*mag(mesh.C().component(1)-yL1)/L_damp.component(1);
         scalarField cplm_z1 = pos(mesh.C().component(2)-zL1)*mag(mesh.C().component(2)-zL1)/L_damp.component(2);
 	
-	scalarField cplm_x2 = neg(mesh.C().component(0)-xL2)*mag(mesh.C().component(0)-xL2)/Ln_damp.component(0);
+	    scalarField cplm_x2 = neg(mesh.C().component(0)-xL2)*mag(mesh.C().component(0)-xL2)/Ln_damp.component(0);
         scalarField cplm_y2 = neg(mesh.C().component(1)-yL2)*mag(mesh.C().component(1)-yL2)/Ln_damp.component(1);
         scalarField cplm_z2 = neg(mesh.C().component(2)-zL2)*mag(mesh.C().component(2)-zL2)/Ln_damp.component(2);
 
