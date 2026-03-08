@@ -1,5 +1,5 @@
 #include "readTransportProperties.H"
-#include "readCPLMParameters.H"
+#include "readCPMLParameters.H"
 #include "readSourceParameters.H"
 
 Info << "\nReading pa" << endl;
@@ -44,7 +44,7 @@ volScalarField cf
     dimensionedScalar("cf",dimVelocity,c0.value()),
     "zeroGradient"
 );
-// CPLM auxiliary fields
+// CPML auxiliary fields
 volVectorField psi
 (
     IOobject
