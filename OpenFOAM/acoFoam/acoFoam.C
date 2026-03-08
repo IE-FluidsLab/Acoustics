@@ -33,7 +33,7 @@ Description
     where
     \vartable
         cf      | Sound speed
-	rhof    | Density
+	    rhof    | Density
         pa      | Acoustic pressure
     \endvartable
 
@@ -107,7 +107,7 @@ int main(int argc, char *argv[])
         }
 
         runTime.write();
-	#include"softSource.H"
+	    #include"softSource.H"
         runTime.printExecutionTime(Info);
     }
 
