@@ -1,21 +1,21 @@
-Info<< "\nReading CPLMParameters" << endl;
+Info<< "\nReading CPMLParameters" << endl;
 
-IOdictionary CPLMParameters 
+IOdictionary CPMLParameters 
 (
     IOobject
     (
-        "CPLMParameters",
+        "CPMLParameters",
         runTime.constant(),
         mesh,
         IOobject::MUST_READ,
         IOobject::NO_WRITE
     )
 );
-bool CPLM( CPLMParameters.lookupOrDefault<Switch>("CPLM",true) );
-dimensionedScalar f0("f0",dimensionSet(0, 0, -1, 0, 0), CPLMParameters);
-dimensionedScalar R_ref("R_ref",dimless, CPLMParameters);
-dimensionedVector L_damp("L_damp",dimLength,CPLMParameters);
-dimensionedVector Ln_damp("Ln_damp",dimLength,CPLMParameters);
+bool CPML( CPMLParameters.lookupOrDefault<Switch>("CPML",true) );
+dimensionedScalar f0("f0",dimensionSet(0, 0, -1, 0, 0), CPMLParameters);
+dimensionedScalar R_ref("R_ref",dimless, CPMLParameters);
+dimensionedVector L_damp("L_damp",dimLength,CPMLParameters);
+dimensionedVector Ln_damp("Ln_damp",dimLength,CPMLParameters);
 
 boundBox meshBb (mesh.bounds());
 dimensionedVector max_lim("max_lim",dimLength,meshBb.max());
