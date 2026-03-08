@@ -1,4 +1,4 @@
-#include"cplm.H"
+#include"cpml.H"
 cpml == gradPsi.component(tensor::XX) + gradPsi.component(tensor::YY) + gradPsi.component(tensor::ZZ) + csi.component(vector::X)+csi.component(vector::Y)+csi.component(vector::Z);
 cpml.correctBoundaryConditions();
 
