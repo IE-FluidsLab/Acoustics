@@ -1,6 +1,34 @@
-Further Developments
-
 Current version: March 2026 – OpenFOAM v2406
+
+## Author 
+
+    Andrea Petronio 
+    https://www.researchgate.net/profile/Andrea-Petronio-2
+
+    In collaboration with IE-FLuids Lab - University of Trieste, Trieste, Italy
+
+## Reference work
+
+    "Modeling Underwater Noise Propagation: A Comparative Study of fully 3D Time-Domain Numerical Strategies"
+    Addeo I., Petronio A., Petris G., Klin P., Cianferra M.
+    Ocean Engineering 2026
+
+--> If you use this code for research or other purposes, please kindly cite this work
+    
+    Details of the model and its validation are presented in the paper
+
+
+## Fundings
+
+    BluEcho - From science to policy: assessing impacts and developing solutions for ship traffic and offshore wind farms through detailed soundmaps 
+    Supported by the Sustainable Blue Economy Partnership. 
+    
+    SONORA - Filling the gap: Thresholds assessment and impact beyond acoustic pressure level linked to emerging blue-growth activities
+    Project under the JPI Oceans (2022) Joint Call for Proposals on Underwater Noise in the Marine Environment
+
+
+
+Further Developments
 
 The current implementation has some limitations and possible areas for improvement. The following points outline potential future developments:
 
