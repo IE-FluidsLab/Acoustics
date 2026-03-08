@@ -1,7 +1,7 @@
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  v2306                                 |
+|  \\    /   O peration     | Version:  v2406                                 |
 |   \\  /    A nd           | Website:  www.openfoam.com                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
@@ -14,29 +14,32 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 source	true;
-fr	20;
-center  (0 -36 0);
-radius 	15;
+fr	20;                // source frequency
+center  (0 -36 0);     // source location
+radius 	15;            // radius of the spherical region where the source values are inposed
+amp     1.414213562;   // source amplitude
 //Sources
 	//monopole
 	monopole 	true;
-		amp		1.414213562;
+
 	//dipole
         dipole          false;
-                amp             1.414213562;
-                d                0.4;
-                theta_          90;//1.57075; //azimutal
-                psi_            90;//1.57075;//90° polar
-	//ricker
+        d               0.4; // distance between poles
+        theta_          90;  // dipole oriantation - azimutal direction
+        psi_            90; 
+
+    //ricker
 	ricker		false;
-		t0      	0.1;
+	t0      	0.1;
+
 //Moving
-circle	false;
-	r 	10;
-	frot 	20;
-line 	false;
-	p1 (-50 0 0);
-	p2 ( 50 0 0);
-	vel 10;
+circle	false;  // this is not used
+	r 	10;     // this is not used
+	frot 	20; // this is not used
+
+line 	false;     // moving source along a line
+	p1 (-50 0 0);  // start point
+ 	p2 ( 50 0 0);  // end point
+	vel 10;        // source velocity
 
 // ************************************************************************* //
