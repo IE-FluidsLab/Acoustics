@@ -1,0 +1,42 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2306                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      SourceParameters;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+source	true;
+fr	20;
+center  (0 -36 0);
+radius 	15;
+//Sources
+	//monopole
+	monopole 	true;
+		amp		1.414213562;
+	//dipole
+        dipole          false;
+                amp             1.414213562;
+                d                0.4;
+                theta_          90;//1.57075; //azimutal
+                psi_            90;//1.57075;//90° polar
+	//ricker
+	ricker		false;
+		t0      	0.1;
+//Moving
+circle	false;
+	r 	10;
+	frot 	20;
+line 	false;
+	p1 (-50 0 0);
+	p2 ( 50 0 0);
+	vel 10;
+
+// ************************************************************************* //
