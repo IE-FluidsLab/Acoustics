@@ -10,14 +10,27 @@ FoamFile
     version     2.0;
     format      ascii;
     class       dictionary;
-    object      cplmParameters;
+    object      cpmlParameters;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-CPLM	true;
+CPML	true;
 f0	20;   
 R_ref   1e-07;
-L_damp	(100  	 0.01 	100);
-Ln_damp (100 	100    	100);
+L_damp	(140  	 0.01 	    140);
+Ln_damp (140 	 140    	140);
 
 // ************************************************************************* //
+
+// The CPML is designed to work with a square box domain.
+//
+// In L_damp (Lx Ly Lz):
+// Lx refers to the damping layer thickness measured from the minimum x boundary.
+// Ly refers to the damping layer thickness measured from the maximum y boundary.
+// Lz refers to the damping layer thickness measured from the minimum z boundary.
+//
+// Note that the value 0.01 in this case is smaller than the cell size, therefore, no CPML
+// layer will be applied in this direction and a free-surface condition (pa = 0)
+// will be enforced instead (see boundary condition for pa)
+//
+// Ln_damp defines the damping layer thickness in the opposite directions
