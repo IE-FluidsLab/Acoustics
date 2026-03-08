@@ -9,7 +9,7 @@
  set or check constant/CPLMParameters
  
 
- Recommendations
+ Recommendations 
 
 - Grid cells must be orthogonal, with a maximum non-orthogonality of 60.
 
@@ -18,3 +18,8 @@
 - We used 15 grid points per wavelength, a coarser mesh may lead to high numerical dispersion effects.
 
 - The Courant number should remain below 0.5. It is automatically evaluated and printed when acoFoam starts running.
+
+Please refer to the paper for further details: 
+“Modeling Underwater Noise Propagation: A Comparative Study of Fully 3D Time-Domain Numerical Strategies” 
+I. Addeo, A. Petronio, G. Petris, P. Klin, and M. Cianferra, Ocean Engineering, 2026. 
+
