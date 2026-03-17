@@ -1,7 +1,7 @@
 # Acoustics
 Acoustic propagation modeling - code and benchmarks (OpenFOAM and Specfem3d)
 
-The contents of this directory correspond to the results presented in the paper “Modeling Underwater Noise Propagation: A Comparative Study of Fully 3D Time-Domain Numerical Strategies” by I. Addeo, A. Petronio, G. Petris, P. Klin, and M. Cianferra, Ocean Engineering 2026.
+The contents of this directory correspond to the results presented in the paper “Modeling Underwater Noise Propagation: A Comparative Study of Fully 3D Time-Domain Numerical Strategies” by I. Addeo, A. Petronio, G. Petris, P. Klin, and M. Cianferra, Ocean Engineering 354 (2026): 124887.
 
 Please refer to the paper for further details, and kindly cite it if you use this code.
 
