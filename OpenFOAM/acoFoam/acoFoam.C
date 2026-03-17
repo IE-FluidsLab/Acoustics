@@ -52,9 +52,9 @@ SourceFiles
 
 ## Reference work
 
-    "Modeling Underwater Noise Propagation: A Comparative Study of fully 3D Time-Domain Numerical Strategies"
-    Addeo I., Petronio A., Petris G., Klin P., Cianferra M.
-    Ocean Engineering 2026
+Addeo, I., Petronio, A., Petris, G., Klin, P., & Cianferra, M. (2026). 
+Modeling underwater noise propagation: A comparative study of fully 3D Time-Domain numerical strategies. 
+Ocean Engineering, 354, 124887.
 
 --> If you use this code for research or other purposes, please kindly cite this work
     
